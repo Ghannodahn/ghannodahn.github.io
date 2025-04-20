@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "cd library && npm run build && cd ..",
-    "deploy": "gh-pages -d library/dist"
+    "build": "cd app && npm run build && cd ..",
+    "dev": "cd app && npm run dev && cd ..",
+    "start": "npm run dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d app/dist"
   },
   "repository": {
     "type": "git",

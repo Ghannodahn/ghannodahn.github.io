@@ -1,0 +1,28 @@
+{
+  "chat": {
+    "prefixes": [
+      {
+        "name": "Explain",
+        "prompt": "Explain the following code in detail:"
+      },
+      {
+        "name": "Refactor",
+        "prompt": "Refactor the following code to improve performance and readability:"
+      },
+      {
+        "name": "Code",
+        "prompt": "Implement these instructions in TypeScript under the /app/src folder:"
+      }
+    ],
+    "postfixes": [
+      {
+        "name": "Simple",
+        "prompt": "Explain in simple terms."
+      },
+      {
+        "name": "Examples",
+        "prompt": "Include examples in your explanation."
+      }
+    ]
+  }
+}

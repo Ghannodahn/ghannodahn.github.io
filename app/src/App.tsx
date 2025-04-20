@@ -1,12 +1,14 @@
 import './App.css'
+import Header from './components/Header'
 
 function App() {
   return (
     <div className="app">
-      <header className="app-header">
+      <Header />
+      <div className="app-body">
         <h1>Hello World</h1>
         <p>Welcome to my library</p>
-      </header>
+      </div>
     </div>
   )
 }
