@@ -1,11 +1,12 @@
 #root {
   background-color: blue;
-  max-width: 100vw;
-  max-height: 100vh;
-  min-width: 100vw;
-  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .logo {
@@ -45,17 +46,20 @@
 }
 
 .app {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .app-body {
   flex: 1;
+  flex-grow: 1;
   background-color: #282c34;
-  padding: 2rem;
+  padding: 0;
   border-radius: 8px;
   color: white;
+  overflow: scroll;
 }
 
 h1 {

@@ -1,17 +1,12 @@
-import React from 'react';
 import styles from './Header.module.css';
 
-interface HeaderProps {
-  title?: string;
-}
-
-const Header: React.FC<HeaderProps> = ({ title = 'Ghannodahn Hub' }) => {
+function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}>
           <a href="/">
-            <h1>{title}</h1>
+            <h1>The Library of The Infinity Citadel</h1>
           </a>
         </div>
         <nav className={styles.nav}>
