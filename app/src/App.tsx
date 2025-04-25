@@ -1,13 +1,40 @@
+import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Home from './components/Home'
+import About from './components/About'
+import Blog from './components/Blog'
+import Contact from './components/Contact'
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home')
+
+  // Function to handle navigation
+  const navigate = (page: string) => {
+    setCurrentPage(page)
+  }
+
+  // Render the appropriate component based on currentPage
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <Home />
+      case 'about':
+        return <About />
+      case 'blog':
+        return <Blog />
+      case 'contact':
+        return <Contact />
+      default:
+        return <Home />
+    }
+  }
+
   return (
     <div className="app">
-      <Header />
+      <Header onNavigate={navigate} currentPage={currentPage} />
       <div className="app-body">
-        <Home />
+        {renderPage()}
       </div>
     </div>
   )
