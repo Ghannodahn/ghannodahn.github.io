@@ -1,3 +1,4 @@
+import './components.css';
 import './Home.css';
 
 function Home() {

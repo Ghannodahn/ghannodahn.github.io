@@ -1,4 +1,4 @@
-import styles from './Header.module.css';
+import './Header.css';
 
 interface HeaderProps {
   onNavigate: (page: string) => void;
@@ -13,20 +13,20 @@ function Header({ onNavigate, currentPage }: HeaderProps) {
   };
 
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
-        <div className={styles.logo}>
+    <header className="header">
+      <div className="container">
+        <div className="logo">
           <a href="/" onClick={(e) => handleNavClick(e, 'home')}>
             <h1>The Library of The Infinity Citadel</h1>
           </a>
         </div>
-        <nav className={styles.nav}>
+        <nav className="nav">
           <ul>
             <li>
               <a 
                 href="/" 
                 onClick={(e) => handleNavClick(e, 'home')}
-                className={currentPage === 'home' ? styles.active : ''}
+                className={currentPage === 'home' ? 'active' : ''}
               >
                 Home
               </a>
@@ -35,7 +35,7 @@ function Header({ onNavigate, currentPage }: HeaderProps) {
               <a 
                 href="/about" 
                 onClick={(e) => handleNavClick(e, 'about')}
-                className={currentPage === 'about' ? styles.active : ''}
+                className={currentPage === 'about' ? 'active' : ''}
               >
                 About
               </a>
@@ -44,7 +44,7 @@ function Header({ onNavigate, currentPage }: HeaderProps) {
               <a 
                 href="/blog" 
                 onClick={(e) => handleNavClick(e, 'blog')}
-                className={currentPage === 'blog' ? styles.active : ''}
+                className={currentPage === 'blog' ? 'active' : ''}
               >
                 Blog
               </a>
@@ -53,7 +53,7 @@ function Header({ onNavigate, currentPage }: HeaderProps) {
               <a 
                 href="/contact" 
                 onClick={(e) => handleNavClick(e, 'contact')}
-                className={currentPage === 'contact' ? styles.active : ''}
+                className={currentPage === 'contact' ? 'active' : ''}
               >
                 Contact
               </a>

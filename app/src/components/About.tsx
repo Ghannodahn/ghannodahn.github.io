@@ -1,3 +1,4 @@
+import './components.css';
 import './About.css';
 
 function About() {

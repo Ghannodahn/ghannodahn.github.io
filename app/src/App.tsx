@@ -18,7 +18,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <Home />
+        return <div className="home-page"><Home /></div>
       case 'about':
         return <About />
       case 'blog':
@@ -26,7 +26,7 @@ function App() {
       case 'contact':
         return <Contact />
       default:
-        return <Home />
+        return <div className="home-page"><Home /></div>
     }
   }
 
@@ -34,7 +34,9 @@ function App() {
     <div className="app">
       <Header onNavigate={navigate} currentPage={currentPage} />
       <div className="app-body">
-        {renderPage()}
+        <div className="page-container">
+          {renderPage()}
+        </div>
       </div>
     </div>
   )

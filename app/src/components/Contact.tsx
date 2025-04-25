@@ -1,3 +1,4 @@
+import './components.css';
 import './Contact.css';
 
 function Contact() {
